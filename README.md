@@ -12,3 +12,9 @@ Pseudocode:
         rock vs rock, rock vs paper, rock vs scissors, paper vs rock, paper vs paper, paper vs scissors, scissors vs rock, scissors vs paper, scissors vs scissors.
 
 -create a function called game to keep score and reports winner or loser at the end.
+
+
+Day 1
+-added prompt to ask user for rock, paper or scissors.
+-added function that randomly returns rock, paper or scissors.
+-added if else on the 9 possible outcomes for the game.
