@@ -1,4 +1,4 @@
-//let user = prompt("Choose rock, paper, or scissors: ");
+let userInput = prompt("Choose rock, paper, or scissors: ");
 
 
 //randomly returns rock, paper or scissors
@@ -17,11 +17,28 @@ function getComputerChoice(){
 
 
 function playRound(playerSelection, computerSelection){
-    let winScenario = ();
+    //trial code
+    let winScenario = (playerSelection === "rock" && computerSelection === "scissors") || 
+                      (playerSelection === "paper" && computerSelection === "rock") || 
+                      (playerSelection === "scissors" && computerSelection === "paper");
+
+    let loseScenario = (playerSelection === "rock" && computerSelection === "paper") || 
+                       (playerSelection === "paper" && computerSelection === "scissors") || 
+                       (playerSelection === "scissors" && computerSelection === "rock");
+
+
+    let drawScenario = (playerSelection === "rock" && computerSelection === "rock") || 
+                       (playerSelection === "paper" && computerSelection === "paper") || 
+                       (playerSelection === "scissors" && computerSelection === "scissors");
+
+    let roundResultAnnouncement
+
+
+    //return (You lose asdbasdad) find return lesson on odin
 }
 
-
-const playerSelection = "rock";
+let playerSelection = userInput.toLowerCase();
+//const playerSelection = "rock";
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
 
@@ -42,5 +59,6 @@ console.log(playRound(playerSelection, computerSelection));
             roundResult = "You Lose! Your Scissors loses to Rock."
         } else if (playerSelection === "scissors" && computerSelection === "paper"){
             roundResult = "You Win! Your Scissors beats Paper."
-        } else (playerSelection === "scissors" && computerSelection === "scissors")
+        } else {
             roundResult = "It's a Draw! You both drew Scissors."
+        };
