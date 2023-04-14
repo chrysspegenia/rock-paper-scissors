@@ -1,7 +1,10 @@
-let userInput = prompt("Choose rock, paper, or scissors: ");
+//let userInput = prompt("Choose rock, paper, or scissors: ");
 
+//let playerSelection = userInput.toLowerCase();
+const playerSelection = "scissors";
+console.log("user:" + playerSelection);
 
-//randomly returns rock, paper or scissors
+//needs reworking
 function getComputerChoice(){
     let choices = ["rock", "paper", "scissors"];
 
@@ -12,36 +15,13 @@ function getComputerChoice(){
     let randomResult = choices[randomChoice];
     return randomResult;
 }
-//console.log(getComputerChoice());
+
+//console.log("computer: " + getComputerChoice());
 
 
 
 function playRound(playerSelection, computerSelection){
-    //trial code
-    let winScenario = (playerSelection === "rock" && computerSelection === "scissors") || 
-                      (playerSelection === "paper" && computerSelection === "rock") || 
-                      (playerSelection === "scissors" && computerSelection === "paper");
-
-    let loseScenario = (playerSelection === "rock" && computerSelection === "paper") || 
-                       (playerSelection === "paper" && computerSelection === "scissors") || 
-                       (playerSelection === "scissors" && computerSelection === "rock");
-
-
-    let drawScenario = (playerSelection === "rock" && computerSelection === "rock") || 
-                       (playerSelection === "paper" && computerSelection === "paper") || 
-                       (playerSelection === "scissors" && computerSelection === "scissors");
-
-    let roundResultAnnouncement
-
-
-    //return (You lose asdbasdad) find return lesson on odin
-}
-
-let playerSelection = userInput.toLowerCase();
-//const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
-
+    
     let roundResult;
     if (playerSelection === "rock" && computerSelection === "rock"){
             roundResult = "It's a Draw! You both drew Rock."
@@ -62,3 +42,18 @@ console.log(playRound(playerSelection, computerSelection));
         } else {
             roundResult = "It's a Draw! You both drew Scissors."
         };
+
+        return roundResult;
+}
+
+
+//const computerSelection = getComputerChoice();
+const computerSelection = "scissors";
+console.log("computer: " + computerSelection);
+console.log(playRound(playerSelection, computerSelection));
+
+
+
+function game(playRound){
+
+}

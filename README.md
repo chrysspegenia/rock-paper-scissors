@@ -18,3 +18,10 @@ Day 1
 -added prompt to ask user for rock, paper or scissors.
 -added function that randomly returns rock, paper or scissors.
 -added if else on the 9 possible outcomes for the game.
+
+Day 2 
+-finalized function playRound() which compares userInput and computerSelection and returns a result of win, lose or draw.
+-made userInput case-insensitive using .toLowerCase() method.
+-need to rework getComputerChoice function doesn't return the proper output.
+(Using hardcoded outcomes of rock, paper, and scissors will return correct results.
+While, using outcomes from getComputerChoice will oftentimes return incorrect results.)
