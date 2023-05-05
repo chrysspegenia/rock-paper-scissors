@@ -22,6 +22,29 @@ Day 1
 Day 2 
 -finalized function playRound() which compares userInput and computerSelection and returns a result of win, lose or draw.
 -made userInput case-insensitive using .toLowerCase() method.
--need to rework getComputerChoice function doesn't return the proper output.
-(Using hardcoded outcomes of rock, paper, and scissors will return correct results.
-While, using outcomes from getComputerChoice will oftentimes return incorrect results.)
+
+
+Day 3
+-added code that would add 1 point to whoever won a round.
+-added function that would return a message whenever one side scores and announce a winner once a specified number of wins was reached.
+
+
+
+
+
+
+figure out how to loop the condition if ends in a draw and no score is added.
+
+add roundRepeater() function that loops the other functions until someone reaches wins 5 rounds.
+
+try using while do loop and set while condition playerScore <= 5 || computerScore <= 5
+
+
+
+let num;
+
+do {
+  num = prompt("Enter a number greater than 100?", 0);
+} while (num <= 100 && num);
+
+try using code above for prompt and set condition if score  <= 5
