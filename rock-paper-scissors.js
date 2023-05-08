@@ -1,4 +1,4 @@
-let userInput = prompt("Choose rock, paper, or scissors: ");
+//let userInput = prompt("Choose rock, paper, or scissors: ");
 
 let playerSelection = userInput.toLowerCase();
 //const playerSelection = "paper";
