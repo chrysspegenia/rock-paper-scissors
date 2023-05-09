@@ -5,12 +5,38 @@ body{
     min-height:100vh;
     display:flex;
     flex-direction:column;
+    font-family: 'Press Start 2P', cursive;
 }
 
 img{
     height: 150px;
     width: 150px;
     border-radius:30px;
+}
+
+
+.scoreLabel{
+    display:flex;
+    justify-content:space-evenly;
+}
+
+div>h2{
+    /*border:2px solid yellow;*/
+}
+
+.scoreContainer{
+    display:flex;
+    justify-content:space-evenly;
+    gap:100px;
+}
+
+.announcer{
+    text-align:center;
+    font-size: 30px;
+}
+
+.playerChoice>img{
+    transform: scaleX(-1);
 }
 
 .header, .footer{
@@ -20,7 +46,6 @@ img{
 }
 
 .choiceContainer{
-    border:5px solid green;
     display:flex;
     justify-content:space-evenly;
     flex:1;
@@ -34,6 +59,4 @@ img{
    gap:10px;
 }
 
-.playerChoice>img{
-    transform: scaleX(-1);
-}
+
