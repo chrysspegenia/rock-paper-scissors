@@ -1,9 +1,10 @@
 body{
-    background-color:aquamarine;
+    background-color:#3882F6;
     margin:0;
     padding:0;
     min-height:100vh;
     display:flex;
+    justify-content:center;
     flex-direction:column;
     font-family: 'Press Start 2P', cursive;
 }
@@ -14,10 +15,25 @@ img{
     border-radius:30px;
 }
 
+.playerChoice>img{
+    transform: scaleX(-1);
+}
+
+.scoreSection{
+    border:5px ridge purple;
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    width: 50em;
+    height:10em;
+    max-width:50em;
+    margin: 25px auto;
+    padding:1.5em;
+}
 
 .scoreLabel{
     display:flex;
-    justify-content:space-evenly;
+    justify-content:space-around;
 }
 
 div>h2{
@@ -26,8 +42,8 @@ div>h2{
 
 .scoreContainer{
     display:flex;
-    justify-content:space-evenly;
-    gap:100px;
+    justify-content:center;
+    gap:24em;
 }
 
 .announcer{
@@ -35,12 +51,8 @@ div>h2{
     font-size: 30px;
 }
 
-.playerChoice>img{
-    transform: scaleX(-1);
-}
-
 .header, .footer{
-    background-color:gray;
+    background-color:#1F2937;
     display:flex;
     justify-content:center;
 }
