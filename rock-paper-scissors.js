@@ -1,15 +1,7 @@
-//let userInput = prompt("Choose rock, paper, or scissors: ");
-
-//let playerSelection = userInput.toLowerCase();
-//const playerSelection = "paper";
-//console.log("user:" + playerSelection);
-
 let playerSelection1;
 let computerSelection1;
 let computerScore = 0;
 let playerScore = 0;
-
-
 
 
 //displays a message whenever the player or computer scores
