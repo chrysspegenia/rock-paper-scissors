@@ -1,12 +1,16 @@
 //let userInput = prompt("Choose rock, paper, or scissors: ");
 
-let playerSelection = userInput.toLowerCase();
+//let playerSelection = userInput.toLowerCase();
 //const playerSelection = "paper";
-console.log("user:" + playerSelection);
+//console.log("user:" + playerSelection);
 
-
+let playerSelection1;
+let computerSelection1;
 let computerScore = 0;
 let playerScore = 0;
+
+
+
 
 //displays a message whenever the player or computer scores
 function announcer(){
@@ -51,8 +55,6 @@ function game(){
 
     return winnerAnnouncement;
 }
-
-
 
 
 //This function outputs a random choice of rock, paper,or scissors
@@ -110,83 +112,10 @@ function playRound1(playerSelection, computerSelection){
 
 const computerSelection = getComputerChoice();
 //const computerSelection = "scissors";
-console.log("computer: " + computerSelection);
-console.log(playRound1(playerSelection, computerSelection));
-console.log(`Rounds the player has won: ${playerScore}`);
-console.log(`Rounds the computer has won: ${computerScore}`);
+//console.log("computer: " + computerSelection);
+//console.log(playRound1(playerSelection, computerSelection));
+//console.log(`Rounds the player has won: ${playerScore}`);
+//console.log(`Rounds the computer has won: ${computerScore}`);
 
-console.log(announcer());
+//console.log(announcer());
 
-
-
-
-let userInput2 = prompt("Choose rock, paper, or scissors: ");
-
-let playerSelection2 = userInput2.toLowerCase();
-//const playerSelection = "paper";
-console.log("user:" + playerSelection2);
-
-
-
-
-function getComputerChoice2(){
-    let choices = ["rock", "paper", "scissors"];
-
-    //chooses a random selection from the array but in numbered form 0-2(number range depends on number of items in array)
-    let randomChoice = Math.floor(Math.random()*choices.length);
-
-    //converts the random number from the array back into string;
-    let randomResult = choices[randomChoice];
-    return randomResult;
-}
-
-
-function playRound2(playerSelection2, computerSelection2){
-    
-    let roundResult;
-    if (playerSelection2 === "rock" && computerSelection2 === "rock"){
-            roundResult = "It's a Draw! You both drew Rock."
-        } else if (playerSelection2 === "rock" && computerSelection2 === "paper"){
-            (roundResult = "You Lose! Your Rock loses to Paper.");
-            (computerScore += 1);
-        } else if (playerSelection2 === "rock" && computerSelection2 === "scissors"){
-            (roundResult = "You Win! Your Rock beats Scissors.");
-            (playerScore += 1);
-        } else if (playerSelection2 === "paper" && computerSelection2 === "rock"){
-            (roundResult = "You Win! Your Paper beats Rock.");
-            (playerScore += 1+playerScore) 
-        } else if (playerSelection2 === "paper" && computerSelection2 === "paper"){
-            roundResult = "It's a Draw! You both drew Paper."
-        } else if (playerSelection2 === "paper" && computerSelection2 === "scissors"){
-            (roundResult = "You Lose! Your Paper loses to Scissors.");
-            (computerScore += 1);
-        } else if (playerSelection2 === "scissors" && computerSelection2 === "rock"){
-            (roundResult = "You Lose! Your Scissors loses to Rock.");
-            (computerScore += 1);
-        } else if (playerSelection2 === "scissors" && computerSelection2 === "paper"){
-            (roundResult = "You Win! Your Scissors beats Paper.");
-            (playerScore += 1); 
-        } else if (playerSelection2 ==="scissors" && computerSelection2 === "scissors") {
-            roundResult = "It's a Draw! You both drew Scissors."
-        } else {
-            alert("Please enter rock, paper or scissors.")
-            //this part prompts the user again they did not input rock, paper or scissors
-            //if (playerSelection !== "rock" || playerSelection !== "paper" || playerSelection !== "scissors"){
-            //    prompt(userInput)
-            //} else {
-
-            //}
-        }
-
-        return roundResult;
-}
-
-const computerSelection2 = getComputerChoice2();
-//const computerSelection = "scissors";
-console.log("computer: " + computerSelection2);
-console.log(playRound1(playerSelection2, computerSelection2));
-console.log(`Rounds the player has won: ${playerScore}`);
-console.log(`Rounds the computer has won: ${computerScore}`);
-
-
-console.log(announcer());
