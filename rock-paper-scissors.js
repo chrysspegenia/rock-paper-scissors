@@ -1,52 +1,60 @@
-let playerSelection1;
-let computerSelection1;
+let playerSelection;
+let computerSelection = getComputerChoice();
 let computerScore = 0;
 let playerScore = 0;
+const buttons = document.querySelectorAll(".button");
+
+const player = document.querySelector(".playerScore");
+player.textContent = `${playerScore}`;
+
+const computer = document.querySelector(".computerScore");
+computer.textContent = `${computerScore}`;
+
+const announcement = document.querySelector(".announcer");
+announcement.textContent = announcer();
 
 
-//displays a message whenever the player or computer scores
-function announcer(){
-    let announcement;
-    if (playerScore === 1){
-        announcement = "Good Job."
-    } else if (playerScore === 2){
-        announcement = "Alright! You'll win if you keep at it."
-    } else if (playerScore === 3){
-        announcement = "*Chandler celebration dance*"
-    } else if (playerScore === 4){
-        announcement = "One more to go."
-    } else if (playerScore === 5){
-        announcement = "You've done it. You won!"
-    } else if (computerScore === 1){
-        announcement = "That's one for the computer."
-    } else if (computerScore === 2){
-        announcement = "The computer is really going for it"
-    } else if (computerScore === 3){
-        announcement = "This computer is good. I wonder if its cheating?"
-    } else if (computerScore === 4){
-        announcement = "The computer only needs 1 more win."
-    } else if (computerScore === 5){
-        announcement = "The computer won the match."
-    } else {
-        announcement = "Let's keep going the match is'nt over"
-    }
+//TRIAL
+let result;
+const playerText = document.querySelector(".playerText");
+const computerText = document.querySelector(".computerText");
+const resultText = document.querySelector(".resultText");
 
-    return `Announcer: ${announcement}`;
-}
+buttons.forEach(button => button.addEventListener("click", () => {
+    playerSelection = button.id;
+    getComputerChoice();
+    playRound(playerSelection, computerSelection);
 
-//to be tweeked or might delete
-function game(){
-    let winnerAnnouncement;
-    if (playerScore === 2) {
-        winnerAnnouncement = "You have won the game."
-    } else if (computerScore === 2){
-        winnerAnnouncement = "The computer won the game."
-    } else {
-        winnerAnnouncement = "The fight continues"
-    }
+    //temporary
+    playerText.textContent = `Player: ${playerSelection}`;
+    computerText.textContent = `Computer: ${computerSelection}`;
+    resultText.textContent = announcer();
+}));
+//END  TRial
 
-    return winnerAnnouncement;
-}
+
+//buttons.forEach((button) => {
+  //  button.addEventListener("click", (e) => {
+    //    //const img = button.querySelector("img");
+      //  playerSelection = this.id;
+        //getComputerChoice();
+        //playRound(playerSelection, computerSelection);
+        //announcer();
+    //});
+//});
+
+//buttons.forEach(function(i){
+//    i.addEventListener("click", function(e){
+//        playerSelection = this.id;
+//       alert(this.id);
+        
+//        getComputerChoice();
+//        announcer();
+       // playRound(playerSelection, computerSelection);
+//    })
+//    console.log(playerSelection);
+//});
+//console.log(buttons);
 
 
 //This function outputs a random choice of rock, paper,or scissors
@@ -60,7 +68,7 @@ function getComputerChoice(){
 
 //this function compares the userInput and getComputerChoice and returns an appropriate response.
 //added code that will add 1 point to whoever won a round.
-function playRound1(playerSelection, computerSelection){
+function playRound(playerSelection, computerSelection){
     
     let roundResult;
     if (playerSelection === "rock" && computerSelection === "rock"){
@@ -101,13 +109,63 @@ function playRound1(playerSelection, computerSelection){
 }
 
 
+//displays a message whenever the player or computer scores
+function announcer(){
+    let announcement;
+    if (playerScore === 1){
+        announcement = "Good Job."
+    } else if (playerScore === 2){
+        announcement = "Alright! You'll win if you keep at it."
+    } else if (playerScore === 3){
+        announcement = "*Chandler celebration dance*"
+    } else if (playerScore === 4){
+        announcement = "One more to go."
+    } else if (playerScore === 5){
+        announcement = "You've done it. You won!"
+    } else if (computerScore === 1){
+        announcement = "That's one for the computer."
+    } else if (computerScore === 2){
+        announcement = "The computer is really going for it"
+    } else if (computerScore === 3){
+        announcement = "This computer is good. I wonder if its cheating?"
+    } else if (computerScore === 4){
+        announcement = "The computer only needs 1 more win."
+    } else if (computerScore === 5){
+        announcement = "The computer won the match."
+    } else if (playerScore === computerScore){
+        announcement = "Let's keep going the match is'nt over"
+    } else {
+        announcement = "Let's Play!"
+    }
 
-const computerSelection = getComputerChoice();
+    return `${announcement}`;
+}
+
+//to be tweeked or might delete
+//function game(){
+//    let winnerAnnouncement;
+//    if (playerScore === 2) {
+//        winnerAnnouncement = "You have won the game."
+//    } else if (computerScore === 2){
+//        winnerAnnouncement = "The computer won the game."
+//    } else {
+//        winnerAnnouncement = "The fight continues"
+//    }
+
+//    return winnerAnnouncement;
+//}
+
+
+//let rockBtn = document.querySelector("#rock")
+
+
+
+//const computerSelection = getComputerChoice();
 //const computerSelection = "scissors";
-//console.log("computer: " + computerSelection);
-//console.log(playRound1(playerSelection, computerSelection));
-//console.log(`Rounds the player has won: ${playerScore}`);
-//console.log(`Rounds the computer has won: ${computerScore}`);
+console.log("computer: " + computerSelection);
+console.log(playRound(playerSelection, computerSelection));
+console.log(`Rounds the player has won: ${playerScore}`);
+console.log(`Rounds the computer has won: ${computerScore}`);
 
-//console.log(announcer());
+console.log(announcer());
 
