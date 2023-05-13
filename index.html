@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./rock-paper-scissors.js"></script>
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>Rock, Paper, Scissors</title>
 </head>
 <body>
         <div class="header"><h1>Rock, Paper, and Scissors</h1></div>
@@ -16,16 +15,19 @@
                 <h2>Computer Score:</h2>
             </div>
             <div class="scoreContainer">
-                <h2 class="playerScore">0</h2>
-                <h2 class="computerScore">0</h2>
+                <div class="playerScore">0</div>
+                <div class="computerScore">0</div>
             </div>
         <div class="announcer"></div>
         </div>
+        <div class="playerText">Player:</div><!--temporary-->
+        <div class="computerText">Computer:</div><!--temporary-->
+        <div class="resultText">Result:</div><!--temporary-->
         <div class="choiceContainer">
             <div class="playerChoice">
-                <img id="playerRock" src="./rock.png">
-                <img id="playerPaper" src="./paper.png">
-                <img id="playerScissors" src="./scissors.png">
+                <div id ="rock" class="button"><img id ="rock" src="./rock.png" alt="rock"></div>
+                <div id ="paper"class ="button"><img id ="paper" src="./paper.png" alt="paper"></div>
+                <div id ="scissors" class ="button"><img id ="scissors" src="./scissors.png" alt="scissors"></div>
             </div>
 
             <div class="compChoice">
@@ -35,6 +37,6 @@
             </div>
         </div>
         <div class="footer"><h3>Created by CF, 2023</h3></div>
-    
+        <script src="./rock-paper-scissors.js"></script>
 </body>
 </html>
