@@ -2,16 +2,12 @@ let playerSelection;
 let computerSelection;
 let computerScore = 0;
 let playerScore = 0;
+
 const buttons = document.querySelectorAll(".button");
-
 const player = document.querySelector(".playerScore");
-
-
 const computer = document.querySelector(".computerScore");
-
-
 const announcement = document.querySelector(".announcer");
-announcement.textContent = playRound(playerSelection, computerSelection);
+announcement.textContent = "Let's Play";
 
 
 //TRIAL
@@ -24,11 +20,7 @@ buttons.forEach(button => button.addEventListener("click", () => {
     playerSelection = button.id;
     getComputerChoice();
     playRound(playerSelection, computerSelection);
-    //announcer();
     
-
-    player.textContent = `${playerScore}`;
-    computer.textContent = `${computerScore}`;
     announcement.textContent = playRound(playerSelection, computerSelection);
 
     //temporary
@@ -94,31 +86,28 @@ function getComputerChoice(){
 function playRound(playerSelection, computerSelection){
 
     let roundResult;
-    if (playerSelection === "rock" && computerSelection === "rock"){
-            roundResult = "It's a Draw! You both drew Rock."
-        } else if (playerSelection === "rock" && computerSelection === "paper"){
-            roundResult = "You Lose! Your Rock loses to Paper.";
-            computerScore++; 
-        } else if (playerSelection === "rock" && computerSelection === "scissors"){
-            roundResult = "You Win! Your Rock beats Scissors."; 
-            playerScore++;
-        } else if (playerSelection === "paper" && computerSelection === "rock"){
-            roundResult = "You Win! Your Paper beats Rock.";
-            playerScore++;
-        } else if (playerSelection === "paper" && computerSelection === "paper"){
-            roundResult = "It's a Draw! You both drew Paper."
-        } else if (playerSelection === "paper" && computerSelection === "scissors"){
-            roundResult = "You Lose! Your Paper loses to Scissors.";
-            computerScore++;
-        } else if (playerSelection === "scissors" && computerSelection === "rock"){
-            roundResult = "You Lose! Your Scissors loses to Rock.";
-            computerScore++;
-        } else if (playerSelection === "scissors" && computerSelection === "paper"){
-            roundResult = "You Win! Your Scissors beats Paper.";
-            playerScore++; 
-        } else {
-            roundResult = "It's a Draw! You both drew Scissors."
+  
+        // trial code use the same roundResult variable and return
+
+
+        if (playerSelection == computerSelection){
+            roundResult = `It's a tie. You both drew ${playerSelection}.`
+        } else if ((playerSelection == "rock" && computerSelection == "scissors") ||
+                   (playerSelection == "paper" && computerSelection == "rock") ||
+                   (playerSelection == "scissors" && computerSelection == "paper")){
+                        playerScore++
+                        roundResult = `You won the round. Your ${playerSelection} beats ${computerSelection}.`
+        } else if ((computerSelection == "rock" && playerSelection == "scissors") ||
+                   (computerSelection == "paper" && playerSelection == "rock") ||
+                   (computerSelection == "scissors" && playerSelection == "paper")) {
+                        computerScore++
+                        roundResult = `You lost the round. Their ${computerSelection} beats your ${playerSelection}.`
         };
+
+        player.textContent = `${playerScore}`;
+        computer.textContent = `${computerScore}`;
+        //trial code ends here
+
 
         return roundResult;
 }
@@ -181,10 +170,9 @@ function announcer(){
 
 //const computerSelection = getComputerChoice();
 //const computerSelection = "scissors";
-console.log("computer: " + computerSelection);
-console.log(playRound(playerSelection, computerSelection));
-console.log(`Rounds the player has won: ${playerScore}`);
-console.log(`Rounds the computer has won: ${computerScore}`);
+//console.log("computer: " + computerSelection);
+//console.log(playRound(playerSelection, computerSelection));
+//console.log(`Rounds the player has won: ${playerScore}`);
+//console.log(`Rounds the computer has won: ${computerScore}`);
 
-console.log(announcer());
-
+//console.log(announcer());
