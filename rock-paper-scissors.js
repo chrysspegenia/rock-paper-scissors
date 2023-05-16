@@ -31,30 +31,6 @@ buttons.forEach(button => button.addEventListener("click", () => {
 //END  TRial
 
 
-//buttons.forEach((button) => {
-  //  button.addEventListener("click", (e) => {
-    //    //const img = button.querySelector("img");
-      //  playerSelection = this.id;
-        //getComputerChoice();
-        //playRound(playerSelection, computerSelection);
-        //announcer();
-    //});
-//});
-
-//buttons.forEach(function(i){
-//    i.addEventListener("click", function(e){
-//        playerSelection = this.id;
-//       alert(this.id);
-        
-//        getComputerChoice();
-//        announcer();
-       // playRound(playerSelection, computerSelection);
-//    })
-//    console.log(playerSelection);
-//});
-//console.log(buttons);
-
-
 function getComputerChoice(){
     const randomChoice = Math.floor(Math.random() * 3)+1;
 
