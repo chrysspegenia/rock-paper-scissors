@@ -55,14 +55,6 @@ buttons.forEach(button => button.addEventListener("click", () => {
 //console.log(buttons);
 
 
-//This function outputs a random choice of rock, paper,or scissors
-//function getComputerChoice(){
-//    let choices = ["rock", "paper", "scissors"];
-//    let randomChoice = Math.floor(Math.random()*choices.length);
-//    let randomResult = choices[randomChoice];
-//    return randomResult;
-//}
-
 function getComputerChoice(){
     const randomChoice = Math.floor(Math.random() * 3)+1;
 
