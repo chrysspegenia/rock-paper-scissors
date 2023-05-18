@@ -11,7 +11,7 @@ announcement.textContent = "Let's Play";
 
 
 //TRIAL
-let result;
+//let result;
 const playerText = document.querySelector(".playerText");
 const computerText = document.querySelector(".computerText");
 const resultText = document.querySelector(".resultText");
@@ -19,8 +19,6 @@ const resultText = document.querySelector(".resultText");
 buttons.forEach(button => button.addEventListener("click", () => {
     playerSelection = button.id;
     getComputerChoice();
-    playRound(playerSelection, computerSelection);
-    
     announcement.textContent = playRound(playerSelection, computerSelection);
 
     //temporary
@@ -54,31 +52,25 @@ function getComputerChoice(){
 function playRound(playerSelection, computerSelection){
 
     let roundResult;
-  
-        // trial code use the same roundResult variable and return
 
+    if (playerSelection == computerSelection){
+        roundResult = `It's a tie. You both drew ${playerSelection}.`
+    } else if ((playerSelection == "rock" && computerSelection == "scissors") ||
+               (playerSelection == "paper" && computerSelection == "rock") ||
+               (playerSelection == "scissors" && computerSelection == "paper")){
+                    playerScore++;
+                    roundResult = `You won the round. Your ${playerSelection} beats ${computerSelection}.`;
+    } else if ((computerSelection == "rock" && playerSelection == "scissors") ||
+               (computerSelection == "paper" && playerSelection == "rock") ||
+               (computerSelection == "scissors" && playerSelection == "paper")) {
+                    computerScore++;
+                    roundResult = `You lost the round. Their ${computerSelection} beats your ${playerSelection}.`;
+    };
 
-        if (playerSelection == computerSelection){
-            roundResult = `It's a tie. You both drew ${playerSelection}.`
-        } else if ((playerSelection == "rock" && computerSelection == "scissors") ||
-                   (playerSelection == "paper" && computerSelection == "rock") ||
-                   (playerSelection == "scissors" && computerSelection == "paper")){
-                        playerScore++
-                        roundResult = `You won the round. Your ${playerSelection} beats ${computerSelection}.`
-        } else if ((computerSelection == "rock" && playerSelection == "scissors") ||
-                   (computerSelection == "paper" && playerSelection == "rock") ||
-                   (computerSelection == "scissors" && playerSelection == "paper")) {
-                        computerScore++
-                        roundResult = `You lost the round. Their ${computerSelection} beats your ${playerSelection}.`
-        };
-
-        player.textContent = `${playerScore}`;
-        computer.textContent = `${computerScore}`;
-        //trial code ends here
-
-
-        return roundResult;
-}
+    player.textContent = `${playerScore}`;
+    computer.textContent = `${computerScore}`;
+    return roundResult;
+};
 
 
 //displays a message whenever the player or computer scores
@@ -128,9 +120,7 @@ function announcer(){
         announcement = "The computer won the match."
     } else if (playerScore === computerScore){
         announcement = "Let's keep going the match is'nt over"
-    } else {
-        announcement = "Let's Play!"
-    }
+    } 
 
     return `${announcement}`;
 }
