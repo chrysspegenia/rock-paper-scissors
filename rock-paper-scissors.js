@@ -128,22 +128,27 @@ function announcer(){
 
 
 function gameResult(){
-    if(playerScore === 10 || computerScore === 10){
+    if(playerScore === 5 || computerScore === 5){
         openPopup();
     };
 }
 
 //for popup message
 let popup = document.getElementById("popupId");
+let playAgain = document.querySelector(".playagainBtn");
 
 function openPopup(){
     popup.classList.add("open-popup");
 }
 
-function closePopup(){
-    //not sure if needed a function or just a click eventListener for play again button
-}
 
+playAgain.addEventListener("click", () => {
+    playerScore = 0;
+    computerScore = 0;
+    player.textContent = 0;
+    computer.textContent = 0;
+    popup.classList.remove("open-popup");
+});
 //const computerSelection = getComputerChoice();
 //const computerSelection = "scissors";
 //console.log("computer: " + computerSelection);
