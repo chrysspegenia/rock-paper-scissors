@@ -20,6 +20,7 @@ buttons.forEach(button => button.addEventListener("click", () => {
     playerSelection = button.id;
     getComputerChoice();
     announcement.textContent = playRound(playerSelection, computerSelection);
+    gameResult();
 
     //temporary
     playerText.textContent = `Player: ${playerSelection}`;
@@ -125,6 +126,23 @@ function announcer(){
     return `${announcement}`;
 }
 
+
+function gameResult(){
+    if(playerScore === 10 || computerScore === 10){
+        openPopup();
+    };
+}
+
+//for popup message
+let popup = document.getElementById("popupId");
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+
+function closePopup(){
+    //not sure if needed a function or just a click eventListener for play again button
+}
 
 //const computerSelection = getComputerChoice();
 //const computerSelection = "scissors";
