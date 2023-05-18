@@ -130,7 +130,21 @@ function announcer(){
 function gameResult(){
     if(playerScore === 5 || computerScore === 5){
         openPopup();
+        resultMessage();
     };
+}
+
+const popupTitle = document.querySelector(".popupTitle");
+const popupMessage = document.querySelector(".popupMessage");
+
+function resultMessage(){
+    if(playerScore == 5){
+        popupTitle.textContent = "Congratulations! You Win!"
+        popupMessage.textContent = "Nice work, you were able to defeat the computer."
+    } else if(computerScore == 5) {
+        popupTitle.textContent = "You Lost!"
+        popupMessage.textContent = "You lost to the computer. You have to try harder to beat it next time."
+    }
 }
 
 //for popup message
@@ -140,7 +154,6 @@ let playAgain = document.querySelector(".playagainBtn");
 function openPopup(){
     popup.classList.add("open-popup");
 }
-
 
 playAgain.addEventListener("click", () => {
     playerScore = 0;
