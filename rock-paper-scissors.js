@@ -137,13 +137,25 @@ function gameResult(){
 const popupTitle = document.querySelector(".popupTitle");
 const popupMessage = document.querySelector(".popupMessage");
 
+//+= and \r\n works with white-space: pre; in css
 function resultMessage(){
     if(playerScore == 5){
-        popupTitle.textContent = "Congratulations! You Win!"
-        popupMessage.textContent = "Nice work, you were able to defeat the computer."
+        popupTitle.textContent = "Congratulations!\r\n"
+        popupTitle.textContent += "You Win!"
+        popupMessage.textContent = "Be strong, but not rude.\r\n"
+        popupMessage.textContent += "Be kind, but not weak.\r\n"
+        popupMessage.textContent += "Be bold, but not bully.\r\n"
+        popupMessage.textContent += "Be humble, but not shy.\r\n"
+        popupMessage.textContent += "Be confident, but not arrogant.\r\n"
+        popupMessage.textContent += "\r\n"
+        popupMessage.textContent += "- Zig Ziglar"
     } else if(computerScore == 5) {
-        popupTitle.textContent = "You Lost!"
-        popupMessage.textContent = "You lost to the computer. You have to try harder to beat it next time."
+        popupTitle.textContent = "You Lost! Try Again."
+        popupMessage.textContent = "If you fall behind, run faster.\r\n"
+        popupMessage.textContent += "Never give up, never surrender,\r\n" 
+        popupMessage.textContent += "and rise up against the odds.\r\n"
+        popupMessage.textContent += "\r\n"
+        popupMessage.textContent += "- Jesse Jackson"
     }
 }
 
