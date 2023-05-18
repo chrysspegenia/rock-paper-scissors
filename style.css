@@ -96,14 +96,14 @@ div>h2{
     transform: translate(-50%, -50%) scale(1);
 }
 
-.popup .popupImg{
+.popup .popupImgContainer{
     display:flex;
     justify-content:center;
     align-items:center;
     gap: 10px;
 }
 
-.popupImg img{
+.popupImgContainer img{
     width: 100px;
     height: 100px;
     margin-top: -50px;
