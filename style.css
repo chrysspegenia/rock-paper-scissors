@@ -17,6 +17,7 @@ img{
 
 .button>img{
     transform: scaleX(-1);
+    cursor: pointer;
 }
 
 .scoreSection{
@@ -73,4 +74,59 @@ div>h2{
    gap:10px;
 }
 
+/*play again popup*/
+.popup{
+    width: 400px;
+    background: #ADE1FB;
+    border-radius: 30px;
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);/*combined with visibility,top will hide the popup*/
+    text-align:center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
 
+.open-popup{ /*will make the popup reappear*/
+    top: 50%;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup .popupImg{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap: 10px;
+}
+
+.popupImg img{
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    border-radius:40%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.popupTitle{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.playagainBtn{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #0F2573;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
