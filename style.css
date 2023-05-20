@@ -1,12 +1,19 @@
-body{
-    background-color:#3882F6;
+*{
+    color:#03e9f4;
     margin:0;
     padding:0;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body{
     min-height:100vh;
     display:flex;
     justify-content:center;
     flex-direction:column;
-    font-family: 'Press Start 2P', cursive;
+    background-image: url("./brick-wall.jpg");
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
 }
 
 .icon{ /*modifyfrom img to icon*/
@@ -23,14 +30,15 @@ body{
 }
 
 .scoreSection{
-    border:5px ridge rgb(127, 212, 69);
+    font-size: 20px;
+    border:5px ridge rgb(158, 248, 99);
     border-radius:20px;
     display:flex;
     flex-direction:column;
     width: 50em;
-    height:10em;
+    height:6em;
     margin: 15px auto;
-    padding:0.25em 1.5em 1.5em 1.5em;
+    padding:1em;
 }
 
 .scoreLabel{
@@ -38,9 +46,6 @@ body{
     justify-content:space-around;
 }
 
-div>h2{
-    /*border:2px solid yellow;*/
-}
 
 .scoreContainer{
     display:flex;
@@ -50,7 +55,7 @@ div>h2{
 
 .announcer{
     text-align:center;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .header, .footer{
@@ -58,6 +63,7 @@ div>h2{
     display:flex;
     justify-content:center;
     color:white;
+    padding: 1em;
 }
 
 .choiceContainer{
