@@ -30,32 +30,36 @@ body{
 }
 
 .scoreSection{
-    font-size: 20px;
-    border:5px ridge rgb(158, 248, 99);
+    font-size: 19px;
+    border:5px ridge rgb(125, 252, 41);
+    box-shadow: 0 2px 25px rgb(125, 252, 41);
     border-radius:20px;
     display:flex;
     flex-direction:column;
-    width: 50em;
+    width: 45em;
     height:6em;
-    margin: 15px auto;
+    margin: 20px auto;
     padding:1em;
 }
 
 .scoreLabel{
     display:flex;
     justify-content:space-around;
+    margin-bottom: 10px;
 }
 
 
 .scoreContainer{
+    font-size:25px;
     display:flex;
     justify-content:center;
-    gap:24em;
+    gap:17em;
 }
 
 .announcer{
     text-align:center;
     font-size: 25px;
+    margin-top: .80em;
 }
 
 .header, .footer{
@@ -93,7 +97,6 @@ body{
     transform: translate(-50%, -50%) scale(0.1);/*combined with visibility,top will hide the popup*/
     text-align:center;
     padding: 0 30px 30px;
-    color: #333;
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
 }
@@ -121,6 +124,7 @@ body{
 
 .popupTitle{
     font-size: 38px;
+    color:#050801;
     font-weight: 500;
     margin: 30px 0 10px;
     white-space: pre;
@@ -128,6 +132,7 @@ body{
 
 .popupMessage{
     font-size: 20px;
+    color:#050801;
     text-align: center;
     margin: 30px 0 5px;
     white-space: pre;
