@@ -147,6 +147,7 @@ const popupMessage = document.querySelector(".popupMessage");
 //+= and \r\n works with white-space: pre; in css
 function resultMessage(){
     if(playerScore == 5){
+        winGSound.play();
         popupTitle.textContent = "Congratulations!\r\n"
         popupTitle.textContent += "You Win!"
         popupMessage.textContent = "Be strong, but not rude.\r\n"
@@ -157,6 +158,7 @@ function resultMessage(){
         popupMessage.textContent += "\r\n"
         popupMessage.textContent += "- Zig Ziglar"
     } else if(computerScore == 5) {
+        loseGSound.play();
         popupTitle.textContent = "You Lost! Try Again."
         popupMessage.textContent = "If you fall behind, run faster.\r\n"
         popupMessage.textContent += "Never give up, never surrender,\r\n" 
@@ -175,6 +177,7 @@ function openPopup(){
 }
 
 playAgain.addEventListener("click", () => {
+    playAgainSound.play();
     playerScore = 0;
     computerScore = 0;
     player.textContent = 0;
