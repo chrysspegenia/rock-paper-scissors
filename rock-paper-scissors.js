@@ -7,6 +7,12 @@ const buttons = document.querySelectorAll(".button");
 const player = document.querySelector(".playerScore");
 const computer = document.querySelector(".computerScore");
 const announcement = document.querySelector(".announcer");
+const winRSound = document.querySelector(".winRSound");
+const loseRSound = document.querySelector(".loseRSound");
+const winGSound = document.querySelector(".winGSound");
+const loseGSound = document.querySelector(".loseGSound");
+const drawSound = document.querySelector(".drawSound");
+const playAgainSound = document.querySelector(".playAgainSound");
 announcement.textContent = "Let's Play! First to get 5 points win.";
 
 
@@ -189,6 +195,8 @@ function roundResultColor(){
         rockBtn.classList.replace("icon","roundWin");
         rockBtn.style.transform = "scaleX(-1)"
         compScissors.classList.replace("icon","roundLose");
+        winRSound.currentTime = 0;
+        winRSound.play();
         setTimeout(() => {
             rockBtn.classList.replace("roundWin", "icon");
             compScissors.classList.replace("roundLose", "icon");
@@ -197,6 +205,8 @@ function roundResultColor(){
         paperBtn.classList.replace("icon","roundWin");
         paperBtn.style.transform = "scaleX(-1)"
         compRock.classList.replace("icon","roundLose");
+        winRSound.currentTime = 0;
+        winRSound.play();
         setTimeout(() => {
             paperBtn.classList.replace("roundWin", "icon");
             compRock.classList.replace("roundLose", "icon");
@@ -205,6 +215,8 @@ function roundResultColor(){
         scissorsBtn.classList.replace("icon","roundWin");
         scissorsBtn.style.transform = "scaleX(-1)"
         compPaper.classList.replace("icon","roundLose");
+        winRSound.currentTime = 0;
+        winRSound.play();
         setTimeout(() => {
             scissorsBtn.classList.replace("roundWin", "icon");
             compPaper.classList.replace("roundLose", "icon");
@@ -213,6 +225,8 @@ function roundResultColor(){
         compRock.classList.replace("icon","roundWin");
         scissorsBtn.classList.replace("icon","roundLose");
         scissorsBtn.style.transform = "scaleX(-1)";
+        loseRSound.currentTime = 0;
+        loseRSound.play();
         setTimeout(() => {
             compRock.classList.replace("roundWin", "icon");
             scissorsBtn.classList.replace("roundLose", "icon");
@@ -221,6 +235,8 @@ function roundResultColor(){
         compPaper.classList.replace("icon","roundWin");
         rockBtn.classList.replace("icon","roundLose");
         rockBtn.style.transform = "scaleX(-1)";
+        loseRSound.currentTime = 0;
+        loseRSound.play();
         setTimeout(() => {
             compPaper.classList.replace("roundWin", "icon");
             rockBtn.classList.replace("roundLose", "icon");
@@ -229,6 +245,8 @@ function roundResultColor(){
         compScissors.classList.replace("icon","roundWin");
         paperBtn.classList.replace("icon","roundLose");
         paperBtn.style.transform = "scaleX(-1)";
+        loseRSound.currentTime = 0;
+        loseRSound.play();
         setTimeout(() => {
             compScissors.classList.replace("roundWin", "icon");
             paperBtn.classList.replace("roundLose", "icon");
@@ -237,6 +255,8 @@ function roundResultColor(){
         compRock.classList.replace("icon","roundTie");
         rockBtn.classList.replace("icon","roundTie");
         rockBtn.style.transform = "scaleX(-1)";
+        drawSound.currentTime = 0;
+        drawSound.play();
         setTimeout(() => {
             compRock.classList.replace("roundTie", "icon");
             rockBtn.classList.replace("roundTie", "icon");
@@ -245,6 +265,8 @@ function roundResultColor(){
         compPaper.classList.replace("icon","roundTie");
         paperBtn.classList.replace("icon","roundTie");
         paperBtn.style.transform = "scaleX(-1)";
+        drawSound.currentTime = 0;
+        drawSound.play();
         setTimeout(() => {
             compPaper.classList.replace("roundTie", "icon");
             paperBtn.classList.replace("roundTie", "icon");
@@ -253,6 +275,8 @@ function roundResultColor(){
         compScissors.classList.replace("icon","roundTie");
         scissorsBtn.classList.replace("icon","roundTie");
         scissorsBtn.style.transform = "scaleX(-1)";
+        drawSound.currentTime = 0;
+        drawSound.play();
         setTimeout(() => {
             compScissors.classList.replace("roundTie", "icon");
             scissorsBtn.classList.replace("roundTie", "icon");
