@@ -171,6 +171,9 @@ playAgain.addEventListener("click", () => {
     computerScore = 0;
     player.textContent = 0;
     computer.textContent = 0;
+    loseGSound.pause();
+    winGSound.pause();
+    announcement.textContent = "Guess you want to go again. First to 5 point wins."
     popup.classList.remove("open-popup");
 });
 
