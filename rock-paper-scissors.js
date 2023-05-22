@@ -16,25 +16,14 @@ const playAgainSound = document.querySelector(".playAgainSound");
 announcement.textContent = "Let's Play! First to get 5 points win.";
 
 
-//TRIAL
-//let result;
-const playerText = document.querySelector(".playerText");
-const computerText = document.querySelector(".computerText");
-const resultText = document.querySelector(".resultText");
-
 buttons.forEach(button => button.addEventListener("click", () => {
     playerSelection = button.id;
     getComputerChoice();
     announcement.textContent = playRound(playerSelection, computerSelection);
     roundResultColor();
     gameResult();
-
-    //temporary
-    playerText.textContent = `Player: ${playerSelection}`;
-    computerText.textContent = `Computer: ${computerSelection}`;
-    resultText.textContent = announcer();
 }));
-//END  TRial
+
 
 
 function getComputerChoice(){
