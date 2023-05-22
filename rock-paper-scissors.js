@@ -7,7 +7,7 @@ const buttons = document.querySelectorAll(".button");
 const player = document.querySelector(".playerScore");
 const computer = document.querySelector(".computerScore");
 const announcement = document.querySelector(".announcer");
-announcement.textContent = "Let's Play";
+announcement.textContent = "Let's Play! First to get 5 points win.";
 
 
 //TRIAL
@@ -20,6 +20,7 @@ buttons.forEach(button => button.addEventListener("click", () => {
     playerSelection = button.id;
     getComputerChoice();
     announcement.textContent = playRound(playerSelection, computerSelection);
+    roundResultColor();
     gameResult();
 
     //temporary
@@ -174,6 +175,90 @@ playAgain.addEventListener("click", () => {
     computer.textContent = 0;
     popup.classList.remove("open-popup");
 });
+
+const rockBtn = document.getElementById("rock");
+const paperBtn = document.getElementById("paper");
+const scissorsBtn = document.getElementById("scissors");
+const compRock = document.getElementById("compRock");
+const compPaper = document.getElementById("compPaper");
+const compScissors = document.getElementById("compScissors");
+
+
+function roundResultColor(){
+    if(playerSelection == "rock" && computerSelection == "scissors"){
+        rockBtn.classList.replace("icon","roundWin");
+        rockBtn.style.transform = "scaleX(-1)"
+        compScissors.classList.replace("icon","roundLose");
+        setTimeout(() => {
+            rockBtn.classList.replace("roundWin", "icon");
+            compScissors.classList.replace("roundLose", "icon");
+        }, 1000);
+    } else if(playerSelection == "paper" && computerSelection == "rock"){
+        paperBtn.classList.replace("icon","roundWin");
+        paperBtn.style.transform = "scaleX(-1)"
+        compRock.classList.replace("icon","roundLose");
+        setTimeout(() => {
+            paperBtn.classList.replace("roundWin", "icon");
+            compRock.classList.replace("roundLose", "icon");
+        }, 1000);
+    } else if(playerSelection == "scissors" && computerSelection == "paper"){
+        scissorsBtn.classList.replace("icon","roundWin");
+        scissorsBtn.style.transform = "scaleX(-1)"
+        compPaper.classList.replace("icon","roundLose");
+        setTimeout(() => {
+            scissorsBtn.classList.replace("roundWin", "icon");
+            compPaper.classList.replace("roundLose", "icon");
+        }, 1000);
+    } else if(computerSelection == "rock" && playerSelection == "scissors"){
+        compRock.classList.replace("icon","roundWin");
+        scissorsBtn.classList.replace("icon","roundLose");
+        scissorsBtn.style.transform = "scaleX(-1)";
+        setTimeout(() => {
+            compRock.classList.replace("roundWin", "icon");
+            scissorsBtn.classList.replace("roundLose", "icon");
+        }, 1000);
+    } else if(computerSelection == "paper" && playerSelection == "rock"){
+        compPaper.classList.replace("icon","roundWin");
+        rockBtn.classList.replace("icon","roundLose");
+        rockBtn.style.transform = "scaleX(-1)";
+        setTimeout(() => {
+            compPaper.classList.replace("roundWin", "icon");
+            rockBtn.classList.replace("roundLose", "icon");
+        }, 1000);
+    } else if(computerSelection == "scissors" && playerSelection == "paper"){
+        compScissors.classList.replace("icon","roundWin");
+        paperBtn.classList.replace("icon","roundLose");
+        paperBtn.style.transform = "scaleX(-1)";
+        setTimeout(() => {
+            compScissors.classList.replace("roundWin", "icon");
+            paperBtn.classList.replace("roundLose", "icon");
+        }, 1000);
+    } else if(computerSelection == "rock" && playerSelection == "rock"){
+        compRock.classList.replace("icon","roundTie");
+        rockBtn.classList.replace("icon","roundTie");
+        rockBtn.style.transform = "scaleX(-1)";
+        setTimeout(() => {
+            compRock.classList.replace("roundTie", "icon");
+            rockBtn.classList.replace("roundTie", "icon");
+        }, 1000);
+    } else if(computerSelection == "paper" && playerSelection == "paper"){
+        compPaper.classList.replace("icon","roundTie");
+        paperBtn.classList.replace("icon","roundTie");
+        paperBtn.style.transform = "scaleX(-1)";
+        setTimeout(() => {
+            compPaper.classList.replace("roundTie", "icon");
+            paperBtn.classList.replace("roundTie", "icon");
+        }, 1000);
+    } else if(computerSelection == "scissors" && playerSelection == "scissors"){
+        compScissors.classList.replace("icon","roundTie");
+        scissorsBtn.classList.replace("icon","roundTie");
+        scissorsBtn.style.transform = "scaleX(-1)";
+        setTimeout(() => {
+            compScissors.classList.replace("roundTie", "icon");
+            scissorsBtn.classList.replace("roundTie", "icon");
+        }, 1000);
+    } 
+}
 //const computerSelection = getComputerChoice();
 //const computerSelection = "scissors";
 //console.log("computer: " + computerSelection);
