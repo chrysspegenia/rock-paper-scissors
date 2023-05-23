@@ -2,7 +2,7 @@
     color:#03e9f4;
     margin:0;
     padding:0;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Bungee Spice', cursive;
 }
 
 body{
@@ -16,7 +16,7 @@ body{
     background-size:cover;
 }
 
-.icon{ /*modifyfrom img to icon*/
+.icon{ /*modify from img to icon*/
     text-align: center;
     font-size: 100px;
     height: 120px;
@@ -72,10 +72,15 @@ body{
 
 .choiceContainer{
     display:flex;
-    justify-content:space-evenly;
-    flex:1;
-    flex-shrink:0;
+    justify-content:center;
+    gap: 15em;
+    flex:1 1 0;
     margin: 15px;
+}
+
+.divider{
+    align-self:center;
+    font-size:5rem;
 }
 
 .playerChoice, .compChoice{
@@ -88,8 +93,8 @@ body{
 
 /*play again popup*/
 .popup{
-    width: 400px;
-    background: #ADE1FB;
+    width: 450px;
+    background: #1F2937;
     border-radius: 30px;
     position: absolute;
     top:0;
@@ -309,3 +314,62 @@ span:nth-child(4){
         bottom: 100%;
     }
 }
+
+/*rick and morty*/
+
+/* .morty{
+    width: 10%;
+    height:auto;
+    left: 90px;
+    bottom: 55px;
+    position:absolute;
+}
+
+#mortyEyes, #mortyEyes .eye, #rickEyes, #rickEyes .eye{
+    position:absolute;
+}
+
+.eye{
+    width: 40px;
+    height:auto;
+}
+
+/*set mortyEye from top set rickEye from bottom*/
+
+/* .rick{
+    width:16%;
+    height:auto;
+    right:50px;
+    bottom:55px;
+    position:absolute;
+}
+
+.mortyThought{ 
+    position:absolute;
+    left:150px;
+    top:170px;
+}
+
+.mortyBubble{
+    width:300px;
+    height:auto;
+}
+
+.mortyText, .rickText{
+    color:#050801;
+    font-size:1.5em;
+    position:absolute;
+    top:80px;
+    left:80px;
+}
+
+.rickThought{
+    position:absolute;
+    right:170px;
+    top:110px;
+}
+
+.rickBubble{
+    width:320px;
+    height:270px;
+} */ 
