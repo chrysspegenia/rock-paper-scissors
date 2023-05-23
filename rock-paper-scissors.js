@@ -278,6 +278,48 @@ function roundResultColor(){
         }, 1000);
     } 
 }
+
+//just for fun
+// document.addEventListener("mousemove", (e) => {
+//     const mouseX = e.clientX;
+//     const mouseY = e.clientY;
+
+//     const mortyEyes = document.getElementById("mortyEyes");
+//     const rekt = mortyEyes.getBoundingClientRect();
+//     const mortyEyesX = rekt.left + rekt.width / 2;
+//     const mortyEyesY = rekt.top + rekt.height / 2;
+
+//     const angleDeg = angle(mouseX, mouseY, mortyEyesX, mortyEyesY);
+
+//     const eyes = document.querySelectorAll(".eye");
+//     eyes.forEach(eye => {
+//         eye.style.transform = `rotate(${90 + angleDeg}deg)`;
+//         mortyEyes.style.filter = `hue-rotate(${angleDeg}deg)`;
+//     })
+// })
+
+document.addEventListener("mousemove", (e) => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    const divider = document.querySelector(".divider");
+    const rect = divider.getBoundingClientRect();
+    const dividerX = rect.left + rect.width /2;
+    const dividerY = rect.top + rect.height /2;
+
+    const angleDeg = angle(mouseX, mouseY, dividerX, dividerY);
+
+    divider.style.filter = `hue-rotate(${30 + angleDeg}deg)`;
+})
+
+
+function angle(cx, cy, ex, ey){
+    const dy = ey - cy;
+    const dx = ex - ey;
+    const rad = Math.atan2(dx, dy);
+    const deg = rad * 180 / Math.PI;
+    return deg;
+}
 //const computerSelection = getComputerChoice();
 //const computerSelection = "scissors";
 //console.log("computer: " + computerSelection);
