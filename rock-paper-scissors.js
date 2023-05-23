@@ -310,6 +310,19 @@ document.addEventListener("mousemove", (e) => {
     const angleDeg = angle(mouseX, mouseY, dividerX, dividerY);
 
     divider.style.filter = `hue-rotate(${30 + angleDeg}deg)`;
+
+
+    const bird = document.querySelector("#eyeContainer");
+    const birdRect = bird.getBoundingClientRect();
+    const birdX = birdRect.left + birdRect.width /2;
+    const birdY = birdRect.top + birdRect.height /2;
+
+    const angleDegBird = angle(mouseX, mouseY, birdX, birdY);
+    console.log(angleDegBird)
+    const eyes = document.querySelectorAll(".birdEye")
+    eyes.forEach(birdEye => {
+        birdEye.style.transform = `rotate(${230 + angleDegBird}deg)`;
+    })
 })
 
 
