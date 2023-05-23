@@ -315,6 +315,20 @@ span:nth-child(4){
     }
 }
 
+#bird{
+    width:5%;
+    position:absolute;
+    bottom:50px;
+    left: 200px;
+}
+
+.birdEye{
+    width:2%;
+    position:absolute;
+    bottom:100px;
+}
+
+
 /*rick and morty*/
 
 /* .morty{
