@@ -257,7 +257,7 @@ document.addEventListener("mousemove", (e) => {
 
 function angle(cx, cy, ex, ey){
     const dy = ey - cy;
-    const dx = ex - ey;
+    const dx = ex - cx;
     const rad = Math.atan2(dx, dy);
     const deg = rad * 180 / Math.PI;
     return deg;
