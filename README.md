@@ -7,7 +7,7 @@ An interactive and engaging javascript application where users can play the clas
 
 2. **Random Computer Moves:** Implement a function that generates random choices for the computer to ensure fair gameplay.
 
-3. **Game Logic:** Integrated with the core logic to determine the winner of each round based on the rules of ock, Paper, Scissors:
+3. **Game Logic:** Integrated with the core logic to determine the winner of each round based on the rules of Rock, Paper, Scissors:
 
     - Rock beats Scissors
     - Scissors beat Paper
