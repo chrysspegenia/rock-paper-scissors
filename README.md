@@ -1,50 +1,18 @@
-# rock-paper-scissors
-javascript rock, paper, scissors project from odin-project
+# Rock Paper Scissors
+An interactive and engaging javascript application where users can play the classic game of rock, paper and scissors against the computer.
 
-Day 1:
-Pseudocode:
--the computer prompts the user for rock, paper, or scissors.
+### Key Features Include:
 
--create function getComputerChoice that randomly returns rock, paper or scissors.
+1. **User Friendly Interface:** A clean interface with buttons representing rock, paper and scissors.
 
--create a function playRound that plays a single round of rock paper scissors.
-        -make if else loop containing rock paper scissors outcomes
-        rock vs rock, rock vs paper, rock vs scissors, paper vs rock, paper vs paper, paper vs scissors, scissors vs rock, scissors vs paper, scissors vs scissors.
+2. **Random Computer Moves:** Implement a function that generates random choices for the computer to ensure fair gameplay.
 
--create a function called game to keep score and reports winner or loser at the end.
+3. **Game Logic:** Integrated with the core logic to determine the winner of each round based on the rules of ock, Paper, Scissors:
 
+    - Rock beats Scissors
+    - Scissors beat Paper
+    - Paper beats Rock
 
-Day 1
--added prompt to ask user for rock, paper or scissors.
--added function that randomly returns rock, paper or scissors.
--added if else on the 9 possible outcomes for the game.
+4. **Score Tracking:** Include a scoring system to keep track of the number of rounds won by the user and the computer. Display the scores prominently on the screen.
 
-Day 2 
--finalized function playRound() which compares userInput and computerSelection and returns a result of win, lose or draw.
--made userInput case-insensitive using .toLowerCase() method.
-
-
-Day 3
--added code that would add 1 point to whoever won a round.
--added function that would return a message whenever one side scores and announce a winner once a specified number of wins was reached.
-
-
-
-
-
-
-figure out how to loop the condition if ends in a draw and no score is added.
-
-add roundRepeater() function that loops the other functions until someone reaches wins 5 rounds.
-
-try using while do loop and set while condition playerScore <= 5 || computerScore <= 5
-
-
-
-let num;
-
-do {
-  num = prompt("Enter a number greater than 100?", 0);
-} while (num <= 100 && num);
-
-try using code above for prompt and set condition if score  <= 5
+5. **Feedback and Animation:** Developed with visual and audio feedback for each round to make the game more engaging. Includes highlighting of the player's and computer's choice in each round along with audio effects whether the player won or lost the round or the game.
